@@ -1,0 +1,439 @@
+<html>
+<link rel="stylesheet" href="https://fdweb.ejd779.repl.co/fluent11.css"></link>
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>Lunchy 3.0.1</title>
+<style>
+    html {
+        font-family: Arial;
+    }
+    option {
+        font-size: 36;
+        padding: 5px;
+    }
+    .stdnt-nm {
+        font-style: bold;
+        font-size: 22px;
+        color: black !important;
+    }
+    .chs-clmn1 {
+        overflow-y: auto;
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        left: 40%;
+        right: 30%;
+        bottom: 0;
+        width: 30%;
+        height: 100%;
+        background-color: #f5f5f5;
+        color: white;
+        border-left: #878787;
+        border-style: solid;
+        border-width: 1px;
+    }
+    .logo {
+      width: 19%;
+      height: 100px;
+    }
+    .chs-clmn2 {
+        overflow-y: auto;
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        left: 70%;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        height: 100%;
+        background-color: #f5f5f5 !important;
+        color: white;
+    }
+    .chs-clmn3 {
+        overflow-y: auto;
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 60%;
+        bottom: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #edf4ff;
+    }
+    .fs-btn {
+        width: 19%;
+        color: none;
+    }
+    .fs-btn-hidden {
+      background-color: #f6f3f0;
+      outline: none;
+      border: none;
+    }
+    .fs-btn-hidden:hover {
+      background-color: #f6f3f0;
+      outline: none;
+      border: none;
+    }
+    .fs-btn-hidden:active {
+      background-color: #f6f3f0 !important;
+      outline: none;
+      border: none;
+    }
+    .stdnt-nm2 {
+        font-style: bold;
+        font-size: 22px;
+        width: 10%;
+        color: black !important;
+    }
+    .lst-inpt {
+        width: 98% !important;
+        font-size: 17px !important;
+    }
+    input {
+        font-size: 22px;
+    }
+    select {
+        font-size: 17px;
+        height: 40px;
+        transition: 0.3s;
+        width: 98%;
+        right: 2px;
+    }
+    button {
+        background-color: deeppink;
+    }
+    button:hover {
+        background-color: #ff73c2;
+    }
+    button:active {
+        background-color: #a600ff;
+    }
+    input[type="text"] {
+      background-color : #202020;
+      color: white;
+    }
+    input[type="url"] {
+      background-color : #202020;
+      color: white;
+    }
+    input:focus[type="text"] {
+      background-color : #303030;
+      color: white;
+    }
+    input:focus[type="url"] {
+      background-color : #303030;
+      color: white;
+    }
+    button {
+        background: deeppink;
+    }
+    .sml-txt {
+        font-size: 12px;
+        color: dimgray;
+    }
+    img {
+        background: none !important;
+    }
+    .no-bg {
+        background: none !important;
+    }
+    .no-bg:hover {
+        background: none !important;
+    }
+    .no-bg:active {
+        background: none !important;
+    }
+    center {
+      background: #f5f5f5 !important;
+    }
+</style>
+<script>
+    function getOccurrence(array, value) {
+        var count = 0;
+        array.forEach((v) => (v === value && count++));
+        return count;
+    }
+    function done() {
+        var n1 = document.getElementById("n1").value
+        var n2 = document.getElementById("n2").value
+        var n3 = document.getElementById("n3").value
+        var n4 = document.getElementById("n4").value
+        var n5 = document.getElementById("n5").value
+        var n6 = document.getElementById("n6").value
+        var n7 = document.getElementById("n7").value
+        var n8 = document.getElementById("n8").value
+        var n9 = document.getElementById("n9").value
+        var n10 = document.getElementById("n10").value
+        var n11 = document.getElementById("n11").value
+        var n12 = document.getElementById("n12").value
+        var n13 = document.getElementById("n13").value
+        var n14 = document.getElementById("n14").value
+        var n15 = document.getElementById("n15").value
+        var n16 = document.getElementById("n16").value
+        var n17 = document.getElementById("n17").value
+        var n18 = document.getElementById("n18").value
+        var n19 = document.getElementById("n19").value
+        var n20 = document.getElementById("n20").value
+        var n21 = document.getElementById("n21").value
+        var n22 = document.getElementById("n22").value
+        var n23 = document.getElementById("n23").value
+        var n24 = document.getElementById("n24").value
+        var n25 = document.getElementById("n25").value
+        var n26 = document.getElementById("n26").value
+        var n27 = document.getElementById("n27").value
+        var n27 = document.getElementById("n28").value
+        var list = [n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n21,n22,n23,n24,n25,n26,n27,n28]
+        op1 = getOccurrence(list, "Option 1")
+        pbj = getOccurrence(list, "PB&J")
+        bgl = getOccurrence(list, "Bagel & Yogurt")
+        chs = getOccurrence(list, "Cheese Sandwich")
+        pck = getOccurrence(list, "Packing")
+        nnslct = getOccurrence(list, "Choose")
+        alert("Option 1: " + op1 + "\nPB&J: " + pbj + "\nBagel & Yogurt: " + bgl + "\nCheese Sandwich: " + chs + "\nPacking: " + pck + "\nNone selected: " + nnslct)
+  }
+  function whatsnew() {
+    alert("What's new in Lunchy\n\n3.0.1 - 3/29/2023\n - Bugfixes\n\n3.0.0 - 3/29/2023\n - Total Redesign\n - Bugfixes\n\nTo view the v2.x changelogs, open up v2.10.3 by adding '/v2.html' to the end of the URL")
+  }
+</script>
+<div class="chs-clmn3">
+<button onclick="document.documentElement.requestFullscreen();" class="fs-btn fluent-button-primary"><img src="https://teachtools.e-j-d.com/lunchcount/icon/fs-enter.svg"></button>
+<button onclick="document.exitFullscreen();" class="fs-btn fluent-button-primary"><img src="https://teachtools.e-j-d.com/lunchcount/icon/fs-exit.svg"></button>
+<button onclick="done();" class="fs-btn fluent-button-primary"><img src="https://teachtools.e-j-d.com/lunchcount/icon/fs-done.svg"></button>
+<button onclick="alert('This feature is not available right now!');" class="fs-btn fluent-button-primary"><img src="https://teachtools.e-j-d.com/lunchcount/icon/fs-list.svg"></button>
+<button onclick="whatsnew();" class="fs-btn fs-btn-hidden no-bg"><img src="/LunchyLogo.png" width="60" height="60"></button>
+<br>
+<span class="sml-txt">Lunchy v3.0.1</span><br>
+<span class="sml-txt">by EARR Learning</span><br>
+<input value="1. Select lunch choice" class="listitems fluent-box">
+<input value="2. Write homework in agenda" class="listinpt fluent-box">
+<input value="3. Show Mrs. Bosco agenda" class="listinpt fluent-box">
+<input value="4. Catch up on Pig Book" class="listinpt fluent-box">
+<input value="5. Read, Google Classroom, or IXL" class="listinpt fluent-box">
+<input value="6. " class="listinpt fluent-box">
+<input value="7. " class="listinpt fluent-box">
+<input value="8. " class="listinpt fluent-box">
+<input value="9. " class="listinpt fluent-box">
+<input value="10. " class="listinpt fluent-box">
+<input value="11. " class="listinpt fluent-box">
+<input value="12. " class="listinpt fluent-box">
+<input value="13. " class="listinpt fluent-box">
+<input value="14. " class="listinpt fluent-box">
+<input value="15. " class="listinpt fluent-box">
+</div>
+<br>
+<div class="chs-clmn1">
+<center>
+<span class="stdnt-nm">Name1</span>
+<select class="fluent-select" id="n1"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+<span class="stdnt-nm">Name2</span>
+<select class="fluent-select" id="n2"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+<span class="stdnt-nm">Name3</span>
+<select class="fluent-select" id="n3"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+<span class="stdnt-nm">Name4</span>
+<select class="fluent-select" id="n4"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name5</span>
+<select class="fluent-select" id="n5"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name6</span>
+<select class="fluent-select" id="n6"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+<span class="stdnt-nm">Name7</span>
+<select class="fluent-select" id="n7"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+<span class="stdnt-nm">Name8</span>
+<select class="fluent-select" id="n8"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name9</span>
+<select class="fluent-select" id="n9"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name10</span>
+<select class="fluent-select" id="n10"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name11</span>
+<select class="fluent-select" id="n11"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name12</span>
+<select class="fluent-select" id="n12"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name13</span>
+<select class="fluent-select" id="n26"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name14</span>
+<select class="fluent-select" id="n27"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+</center>
+</div>
+<div class="chs-clmn2">
+<center>
+<span class="stdnt-nm">Name15</span>
+<select class="fluent-select" id="n13"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name16</span>
+<select class="fluent-select" id="n14"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name17</span>
+<select class="fluent-select" id="n15"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name18</span>
+<select class="fluent-select" id="n16"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name19</span>
+<select class="fluent-select" id="n17"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name20</span>
+<select class="fluent-select" id="n18"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name21</span>
+<select class="fluent-select" id="n19"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name22</span>
+<select class="fluent-select" id="n20"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name23</span>
+<select class="fluent-select" id="n21"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name24</span>
+<select class="fluent-select" id="n22"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name25</span>
+<select class="fluent-select" id="n23"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name26</span>
+<select class="fluent-select" id="n24"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select><span class="stdnt-nm">Name27</span>
+<select class="fluent-select" id="n25"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+</select><span class="stdnt-nm">Name28</span>
+<select class="fluent-select" id="n28"><option selected value="Choose">&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;Choose&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;&#128721;</option>
+    <option>Option 1</option>
+    <option>PB&J</option>
+    <option>Bagel & Yogurt</option>
+    <option>Cheese Sandwich</option>
+    <option>Packing</option>
+</select>
+</center>
+</div>
+<script>
+  document.write("<style>:root{--accent:#fc0373";}</style>")
+</script>
+</html>
